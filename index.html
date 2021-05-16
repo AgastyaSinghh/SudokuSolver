@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Sudoku Solver
+        </title>
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <h1 class="title">Sudoku Solver</h1>
+        <hr color="white">
+        <!--lets  ignore it-->
+        <br><br>
+        <!--<button type="button" onclick="myFunc()">Try Me</button>-->
+        <table class='mainTable'>
+            <tr>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b00" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b01" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b02" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b10" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b11" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b12" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b20" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b21" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b22" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b03" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b04" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b05" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b13" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b14" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b15" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b23" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b24" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b25" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b06" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b07" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b08" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b16" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b17" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b18" name="enter" maxlength=1>
+                            </td>
+                        </tr><tr>
+                            <td>
+                                <input class="data" type="text" id="b26" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b27" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b28" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b30" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b31" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b32" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b40" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b41" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b42" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b50" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b51" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b52" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b33" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b34" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b35" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b43" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b44" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b45" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b53" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b54" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b55" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        
+                        
+                    </table>
+                </td>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b36" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b37" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b38" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b46" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b47" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b48" name="enter" maxlength=1>
+                            </td>
+                        </tr><tr>
+                            <td>
+                                <input class="data" type="text" id="b56" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b57" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b58" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b60" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b61" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b62" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b70" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b71" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b72" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b80" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b81" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b82" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b63" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b64" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b65" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b73" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b74" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b75" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b83" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b84" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b85" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        
+                        
+                    </table>
+                </td>
+                <td class='bigBox'>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b66" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b67" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b68" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="data" type="text" id="b76" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b77" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b78" name="enter" maxlength=1>
+                            </td>
+                        </tr><tr>
+                            <td>
+                                <input class="data" type="text" id="b86" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b87" name="enter" maxlength=1>
+                            </td>
+                            <td>
+                                <input class="data" type="text" id="b88" name="enter" maxlength=1>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table><br>
+        <button class="btn"  onclick="solve()">Get Solution</button>
+        <!-- <button class="btn"  onclick="displayRowCol()">FillWithIndex</button> -->
+        <button class="btn"  onclick="clearMatrix()">Clear</button>
+
+        <p id="log"></p>
+        <br><br>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+    replacing <input class="data" type="text" id="b11" name="enter" maxlength=1> with textbox
+
+    <input class='data' type="text"  name="enter" maxlength=ing width="35">
+
+-->

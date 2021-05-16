@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(46, 46, 46);
+    color: ivory;
+}
+.title{
+    display: block;
+    color: ivory;
+    text-align: center;
+}
+.mainTable,td {
+    border: 1px solid ivory;
+}
+.mainTable{
+    background-color: ivory;
+}
+.bigBox{
+    background-color: rgb(46, 46, 46);
+}
+td{
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2px;
+}
+td:hover{
+    color: turquoise;
+}
+.bigBox{
+    border: 0;
+    height: 112px;
+    width: 112px;
+}
+.bigBox:hover{
+    color: ivory;
+}
+.data{
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    background-color: inherit;
+    color: ivory;
+    border: none;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn{
+    align-self:initial;
+    background-image: radial-gradient(rgb(8, 44, 39),rgb(0, 0, 0));
+    color: rgb(168, 248, 231);
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgb(168, 248, 231);
+    margin-left: 5px;
+}
+.btn:hover{
+    background-color: rgb(48, 48, 48);
+    background-image: none;
+    border: 1px solid ivory;
+}
